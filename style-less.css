@@ -1,0 +1,252 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: #f6f5f0;
+  color: #252b27;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
+.container {
+  width: calc(100% - 64px);
+  max-width: 1160px;
+  margin-inline: auto;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 28px;
+  border-bottom: 1px solid #dedfd7;
+}
+.logo {
+  color: #252b27;
+  text-decoration: none;
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: -2px;
+}
+.logo span {
+  font-size: 15px;
+  vertical-align: top;
+  letter-spacing: 0;
+}
+.header-note {
+  color: #70766f;
+  font-size: 13px;
+}
+.intro {
+  padding-top: 55px;
+}
+.intro .eyebrow {
+  color: #315d48;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.intro h1 {
+  margin: 18px 0;
+  font-size: clamp(36px, 5vw, 62px);
+  line-height: 1.08;
+  font-weight: 500;
+  letter-spacing: -2px;
+}
+.intro .intro-description {
+  max-width: 470px;
+  color: #70766f;
+  font-size: 15px;
+}
+.section-heading {
+  margin: 45px 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.section-heading h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+.section-heading span {
+  font-size: 12px;
+  color: #70766f;
+  white-space: nowrap;
+}
+.catalog {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+.card {
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #e4e5de;
+  border-radius: 20px;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(37, 43, 39, 0.07);
+}
+.card .card-visual {
+  height: 220px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #315d48;
+}
+.card .card-visual .item-number {
+  position: absolute;
+  top: 18px;
+  left: 20px;
+  font-size: 11px;
+  opacity: 0.65;
+}
+.card .card-visual .product-symbol {
+  font-size: 112px;
+  line-height: 1;
+  text-shadow: 0 12px 16px rgba(37, 43, 39, 0.125);
+}
+.card .card-visual .visual-caption {
+  position: absolute;
+  bottom: 16px;
+  font-size: 9px;
+  letter-spacing: 3px;
+  opacity: 0.6;
+}
+.card .keyboard {
+  background: #e6ebe3;
+}
+.card .headphones {
+  background: #eae5dc;
+  color: #7c6550;
+}
+.card .lamp {
+  background: #e3e8e8;
+  color: #4b6467;
+}
+.card .card-content {
+  padding: 24px;
+}
+.card .category {
+  margin: 0 0 10px;
+  font-size: 9px;
+  letter-spacing: 1.4px;
+  color: #70766f;
+}
+.card h3 {
+  margin: 0 0 12px;
+  font-size: 19px;
+  font-weight: 500;
+}
+.card .description {
+  margin: 0;
+  min-height: 66px;
+  color: #70766f;
+  font-size: 13px;
+  line-height: 1.7;
+}
+.card .card-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-top: 24px;
+}
+.card .price {
+  margin: 0;
+  font-size: 21px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.card .price span {
+  font-size: 12px;
+  font-weight: 400;
+  color: #70766f;
+}
+.card .buy-button {
+  background: #315d48;
+  color: #fff;
+  border: 1px solid #315d48;
+  border-radius: 10px;
+  padding: 12px 18px;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+.card .buy-button:hover {
+  background: #252b27;
+  transform: translateY(-2px);
+}
+.card .buy-button:focus-visible {
+  outline: 3px solid #be8c43;
+  outline-offset: 4px;
+}
+.card .buy-button span {
+  margin-left: 10px;
+}
+.purchase-status {
+  min-height: 24px;
+  margin: 20px 0;
+  font-size: 14px;
+  color: #315d48;
+}
+.footer {
+  border-top: 1px solid #dedfd7;
+  padding-block: 24px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  color: #70766f;
+  font-size: 11px;
+}
+@media (max-width: 1000px) {
+  .catalog {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 600px) {
+  .container {
+    width: calc(100% - 32px);
+  }
+  .header {
+    padding-block: 18px;
+  }
+  .header-note {
+    max-width: 140px;
+    text-align: right;
+    font-size: 11px;
+  }
+  .intro {
+    padding-top: 32px;
+  }
+  .section-heading {
+    margin-top: 32px;
+  }
+  .catalog {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .card .description {
+    min-height: 0;
+  }
+  .footer {
+    flex-direction: column;
+    gap: 6px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .card .buy-button {
+    transition: none;
+  }
+  .card:hover,
+  .card .buy-button:hover {
+    transform: none;
+  }
+}

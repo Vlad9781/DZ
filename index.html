@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Каталог аксесуарів для комфортного робочого місця.">
+  <title>FORMA — каталог товарів</title>
+  <!-- Для перевірки Less замініть style-scss.css на style-less.css. -->
+  <link rel="stylesheet" href="style-scss.css">
+</head>
+<body>
+  <header class="header container">
+    <a class="logo" href="index.html" aria-label="FORMA — головна">forma<span>®</span></a>
+    <span class="header-note">Речі для щоденного натхнення</span>
+  </header>
+  <main class="container">
+    <section class="intro" aria-labelledby="catalog-title">
+      <p class="eyebrow">КОЛЕКЦІЯ / 01</p>
+      <h1 id="catalog-title">Менше зайвого.<br>Більше комфорту.</h1>
+      <p class="intro-description">Продумані аксесуари для простору, у якому хочеться працювати й створювати.</p>
+      <div class="section-heading"><h2>Обране для вашого столу</h2><span>03 товари</span></div>
+    </section>
+    <section class="catalog" aria-label="Товари">
+      <article class="card">
+        <div class="card-visual keyboard" aria-hidden="true"><span class="item-number">/ 01</span><span class="product-symbol">⌨</span><span class="visual-caption">FORMA ESSENTIALS</span></div>
+        <div class="card-content">
+          <p class="category">ДЛЯ РОБОЧОГО ПРОСТОРУ</p>
+          <h3>Бездротова клавіатура</h3>
+          <p class="description">Тихі клавіші, компактна форма та зручне підключення для зосередженої роботи.</p>
+          <div class="card-bottom"><p class="price">1 890 <span>грн</span></p><button class="buy-button" type="button" aria-label="Купити: Бездротова клавіатура">Купити <span aria-hidden="true">↗</span></button></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-visual headphones" aria-hidden="true"><span class="item-number">/ 02</span><span class="product-symbol">◉</span><span class="visual-caption">FORMA ESSENTIALS</span></div>
+        <div class="card-content">
+          <p class="category">ДЛЯ РОБОЧОГО ПРОСТОРУ</p>
+          <h3>Бездротові навушники</h3>
+          <p class="description">Чистий звук і м’які амбушури, щоб залишатися у своєму ритмі протягом дня.</p>
+          <div class="card-bottom"><p class="price">2 490 <span>грн</span></p><button class="buy-button" type="button" aria-label="Купити: Бездротові навушники">Купити <span aria-hidden="true">↗</span></button></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-visual lamp" aria-hidden="true"><span class="item-number">/ 03</span><span class="product-symbol">◒</span><span class="visual-caption">FORMA ESSENTIALS</span></div>
+        <div class="card-content">
+          <p class="category">ДЛЯ РОБОЧОГО ПРОСТОРУ</p>
+          <h3>Настільна лампа</h3>
+          <p class="description">Тепле регульоване світло та лаконічний дизайн для затишних вечорів за столом.</p>
+          <div class="card-bottom"><p class="price">1 290 <span>грн</span></p><button class="buy-button" type="button" aria-label="Купити: Настільна лампа">Купити <span aria-hidden="true">↗</span></button></div>
+        </div>
+      </article>
+    </section>
+    <p class="purchase-status" role="status" aria-live="polite"></p>
+  </main>
+  <footer class="footer container"><span>forma® · Створено для вашого простору</span><span>Практична робота · Варіант 1</span></footer>
+  <script>
+    const status = document.querySelector('.purchase-status');
+    document.querySelectorAll('.buy-button').forEach(button => {
+      button.addEventListener('click', () => {
+        const name = button.closest('.card').querySelector('h3').textContent;
+        status.textContent = `«${name}» обрано. Це навчальний каталог, замовлення не оформлюється.`;
+      });
+    });
+  </script>
+</body>
+</html>
